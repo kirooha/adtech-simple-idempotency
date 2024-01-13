@@ -1,0 +1,5 @@
+POST http://localhost:9090/create-campaign
+Accept: */*
+Content-Type: application/json
+
+{"name":"Vasya's campaign", "description": "Vasya's campaign to sell books"}

@@ -1,0 +1,14 @@
+POST http://localhost:9090/add-view
+Accept: */*
+Content-Type: application/json
+
+{"event_id":"81e5dd4b-fcad-4550-81ef-459760b2fb9c", "ad_id":"aae5192e-6b8b-4950-b61b-12f813f96fbd"}
+###
+POST http://localhost:9090/add-view
+Accept: */*
+Content-Type: application/json
+
+{"event_id":"690b3fe6-5641-44a6-9a94-891ebaed7e9b", "ad_id":"aae5192e-6b8b-4950-b61b-12f813f96fbd"}
+###
+GET http://localhost:9091/view/aae5192e-6b8b-4950-b61b-12f813f96fbd
+Accept: */*

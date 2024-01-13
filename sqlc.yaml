@@ -1,0 +1,23 @@
+version: "2"
+sql:
+  - engine: "postgresql"
+    queries: "internal/pkg/dbquery/query.sql"
+    schema: "db/structure.sql"
+    gen:
+      go:
+        package: "dbquery"
+        sql_package: "pgx/v5"
+        out: "internal/pkg/dbquery"
+        overrides:
+          - db_type: "uuid"
+            nullable: false
+            go_type:
+              import: "github.com/google/uuid"
+              type: "UUID"
+              pointer: true
+          - db_type: "uuid"
+            nullable: true
+            go_type:
+              import: "github.com/google/uuid"
+              type: "UUID"
+              pointer: true
